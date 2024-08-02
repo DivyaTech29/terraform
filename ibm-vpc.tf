@@ -34,7 +34,7 @@ resource "aws_internet_gateway" "ibm_igw" {
 resource "aws_route_table" "ibm_web_rt" {
   vpc_id = aws_vpc.ibm_vpc.id
 
-  route - {
+  route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.ibm_igw.id
   }
